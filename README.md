@@ -6,6 +6,29 @@ cpbox is a lightweight and competitive programming workspace build around neovim
 ![neovim](https://img.shields.io/badge/neovim-57a143?logo=neovim&logoColor=white)
 ![tmux](https://img.shields.io/badge/tmux-1bb91f?logo=tmux&logoColor=white)
 
+## requirements
+1. g++
+2. neovim
+3. tmux
+4. sudo
+
+## installation
+clone the repo and run the install script:
+git clone https://github.com/OnlyShockingCub/cpbox/tree/main
+cd cpbox
+
+./install.sh
+The install script builds cpbox and installs it to /usr/local/bin
+
+building cpbox... 
+installing cpbox... 
+cpbox installed successfully!
+
+after installation cpbox can be run from anywhere: cpbox <filename> <time>
+for example:
+cpbox main.cpp 90
+
+
 ## current features
 
 1. opens neovim for writing solutions
