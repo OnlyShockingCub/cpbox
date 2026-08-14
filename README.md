@@ -5,6 +5,7 @@ cpbox is a lightweight and competitive programming workspace build around neovim
 ![status](https://img.shields.io/badge/status-early%20development-orange)
 ![neovim](https://img.shields.io/badge/neovim-57a143?logo=neovim&logoColor=white)
 ![tmux](https://img.shields.io/badge/tmux-1bb91f?logo=tmux&logoColor=white)
+![wezterm](https://img.shields.io/badge/wezterm-4E49EE?logo=wezterm&logoColor=white)
 
 ## requirements
 1. g++
