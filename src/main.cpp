@@ -11,6 +11,4 @@ int main(int argc, char* argv[]) {
     int time = stoi(argv[2]);
 
     start_session(filename, time);
-
-    return 0;
 }

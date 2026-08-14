@@ -1,6 +1,5 @@
 #pragma once
 
 #include <string>
-using namespace std;
 
-void start_session(string filename, int time);
+void start_session(std::string filename, int time);
