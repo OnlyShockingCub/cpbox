@@ -1,3 +1,7 @@
 cpbox
 *.swp
 *.swo
+*.exe
+a.out
+test.cpp
+
