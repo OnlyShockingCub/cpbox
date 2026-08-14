@@ -2,10 +2,12 @@
 
 cpbox is a lightweight and competitive programming workspace build around neovim and tmux.
 
-![status](https://img.shields.io/badge/status-early%20development-orange)
-![neovim](https://img.shields.io/badge/neovim-57a143?logo=neovim&logoColor=white)
-![tmux](https://img.shields.io/badge/tmux-1bb91f?logo=tmux&logoColor=white)
-![wezterm](https://img.shields.io/badge/wezterm-4E49EE?logo=wezterm&logoColor=white)
+[![status](https://img.shields.io/badge/status-early%20development-orange)](https://github.com/OnlyShockingCub/cpbox)
+[![neovim](https://img.shields.io/badge/neovim-57a143?logo=neovim&logoColor=white)](https://neovim.io/)
+[![tmux](https://img.shields.io/badge/tmux-1bb91f?logo=tmux&logoColor=white)](https://github.com/tmux/tmux)
+[![wezterm](https://img.shields.io/badge/wezterm-4E49EE?logo=wezterm&logoColor=white)](https://wezterm.org/)
+[![countdown](https://img.shields.io/badge/countdown-timer-orange?logo=clockify&logoColor=white)](https://github.com/aldernero/countdown)
+[![confetty](https://img.shields.io/badge/confetty-confetti-ff69b4)](https://github.com/maaslalani/confetty)
 
 ## requirements
 1. g++
