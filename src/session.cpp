@@ -16,21 +16,33 @@ string get_executable_dir() {
 void start_session(string filename, int time) {
     string time_str = to_string(time) + "m";
     string cur_dir = fs::current_path().string();
-    string root = fs::path(get_executable_dir()).parent_path().string();
-    string config = root + "/wezterm/fullscreen.lua";
+
+    string executable_dir = get_executable_dir();
+    string root = fs::path(executable_dir).parent_path().string();
+
+    string wezterm_config = root + "/wezterm/fullscreen.lua";
+    string nvim_config = root + "/nvim/init.lua";
 
     string cmd =
         "wezterm "
-        "--config-file \"" + config + "\" "
+        "--config-file \"" + wezterm_config + "\" "
         "start --always-new-process "
         "--cwd \"" + cur_dir + "\" -- "
         "sh -c \""
         "touch \\\"" + filename + "\\\" && "
-        "tmux new-session -s cpp_workspace 'nvim \\\"" + filename + "\\\"' \\; "
-        "split-window -h \\; "
+        "tmux new-session -d -s cpp_workspace 'sh' \\; "
+        "split-window -h -t cpp_workspace:0.0 \\; "
+        "split-window -v -t cpp_workspace:0.1 \\; "
+        "send-keys -t cpp_workspace:0.0 "
+        "'CPBOX=1 "
+        "CPBOX_FILE=\\\"" + filename + "\\\" "
+        "CPBOX_OUTPUT_PANE=cpp_workspace:0.2 "
+        "nvim \\\"" + filename + "\\\" "
+        "-c \\\"luafile " + nvim_config + "\\\"' C-m \\; "
         "send-keys -t cpp_workspace:0.1 "
         "'countdown " + time_str + " && confetty' C-m \\; "
-        "select-pane -t cpp_workspace:0.0"
+        "select-pane -t cpp_workspace:0.0 \\; "
+        "attach-session -t cpp_workspace"
         "\"";
 
     system(cmd.c_str());

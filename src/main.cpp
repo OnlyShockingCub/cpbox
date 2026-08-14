@@ -7,6 +7,11 @@ int main(int argc, char* argv[]) {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
+    if (argc < 3) {
+        cerr << "usage: cpbox <filename> <time>\n";
+        return 1;
+    }
+
     string filename = argv[1];
     int time = stoi(argv[2]);
 
