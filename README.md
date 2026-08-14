@@ -11,6 +11,7 @@ cpbox is a lightweight and competitive programming workspace build around neovim
 2. neovim
 3. tmux
 4. sudo
+5. wezterm
 
 ## installation
 clone the repo and run the install script:
